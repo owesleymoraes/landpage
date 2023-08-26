@@ -1,81 +1,75 @@
-:root {
-    --primary-color: #040233;
-    --white-color: #FFFFFF;
-    --gap: 3rem;
+.intro-content {
+  display: grid;
+  position: relative;
+  top: -8rem;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--gap);
+  min-height: 100vh;
 }
 
-* {
-  margin: 0;
-  padding: 0;
+.intro-text-content {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
 }
 
-/*
-font-family: 'Montserrat', sans-serif
-font-family: 'Open Sans', sans-serif
-*/
-
-html {
-  font-size: 62.5%;
+.intro-img img,
+.intro-img svg {
+  max-width: 100%;
+  height: auto;
 }
 
-body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 2rem;
-  color: var(--primary-color);
+.intro-img {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Montserrat", sans-serif;
+.top3-content {
+  display: flex;
+  max-width: 64rem;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  min-height: 100vh;
 }
 
-h1 {
-  font-size: 6rem;
-  text-transform: uppercase;
+.grid-one-content {
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  height: 100vh;
 }
 
-h2 {
-  font-size: 5.5rem;
+.grid-main-heading {
+  margin-bottom: 1rem;
 }
 
-h3 {
-  font-size: 5rem;
+.grid-main-description {
+  padding-bottom: 5rem;
 }
 
-h4 {
-  font-size: 4.5rem;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+  counter-reset: grid-counter;
 }
 
-h5 {
-  font-size: 4rem;
+.grid h3 {
+  font-size: 3rem;
+  position: relative;
+  padding-left: 5rem;
+  padding-bottom: 2rem;
 }
 
-h6 {
-  font-size: 3.5rem;
-}
-
-.white-bg {
-    background: #FFFFFF;
-}
-
-.main-bg {
-  background-image: url("../img/main.svg");
-  background-size: cover;
-  background-position: center center;
-  color: var(--white-color);
-}
-
-.main-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: var(--gap);
-}
-
-.section {
-    min-height: 100vh;
-  
+.grid h3::before {
+  counter-increment: grid-counter;
+  content: counter(grid-counter);
+  position: absolute;
+  font-size: 8rem;
+  font-style: italic;
+  top: -3rem;
+  left: -1.6rem;
+  transform: rotate(5deg);
 }
