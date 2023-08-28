@@ -7,7 +7,7 @@
   min-height: 100vh;
 }
 
-.intro-text-content {
+.intro-text-content .intro-img {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -17,12 +17,6 @@
 .intro-img svg {
   max-width: 100%;
   height: auto;
-}
-
-.intro-img {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
 }
 
 .top3-content {
@@ -72,4 +66,21 @@
   top: -3rem;
   left: -1.6rem;
   transform: rotate(5deg);
+}
+
+.gallery-img {
+  width: 100%;
+  max-width: 36rem;
+  max-height: 36rem;
+  overflow: hidden;
+}
+
+.gallery-img img {
+  width: 70%;
+  height: 80%;
+  transition: all 300ms ease-in-out;
+}
+
+.gallery-img img:hover {
+  transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
 }
