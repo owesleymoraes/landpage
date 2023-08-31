@@ -61,3 +61,38 @@ a {
 p {
   margin-bottom: 2rem;
 }
+
+.responsive-table {
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+table {
+  min-width: 36rem;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table caption {
+  font-style: italic;
+  font-size: 1.6rem;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+thead tr th {
+  background-color: #e5e5e5;
+}
+
+table td,
+table th {
+  white-space: nowrap;
+  text-align: left;
+  padding: 1rem;
+  border: 0.1rem solid #c5c5c5;
+}
+
+tfoot tr td {
+  background-color: #e5e5e5;
+  text-align: end;
+}
