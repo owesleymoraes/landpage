@@ -1,7 +1,7 @@
 .intro-content {
   display: grid;
   position: relative;
-  top: -8rem;
+  /* top: -8rem; */
   grid-template-columns: 1fr 1.5fr;
   gap: var(--gap);
   min-height: 100vh;
@@ -83,4 +83,68 @@
 
 .gallery-img img:hover {
   transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
+
+.contact-form {
+  grid-column: span 2;
+}
+
+.contact-form .form-grid {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+
+.form-group {
+  flex: 1 1 32rem;
+}
+
+.form-grid legend {
+  font-style: italic;
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+}
+
+.form-group label {
+  display: block;
+}
+
+.form-group input {
+  border: none;
+  background: var(--white-color);
+  padding: 1.5rem 2rem;
+  width: 90%;
+}
+
+.form-group textarea {
+  border: none;
+  background: var(--white-color);
+  padding: 1.5rem 2rem;
+  width: 96.5%;
+}
+
+.form-group button {
+  border: 0.5rem solid var(--white-color);
+  background: none;
+  color: var(--white-color);
+  padding: 1.5rem 2rem;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.form-group button:hover {
+  background: var(--white-color);
+  color: var(--primary-color);
+}
+
+.footer {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.footer a {
+  color: #444;
 }
